@@ -48,7 +48,7 @@ public class GifPlayer {
         JDialog d2= pane2.createDialog(null,"Wake up to Reality");
         d.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         d2.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-        Timer pause2 = new Timer(45000, e -> {
+        Timer pause1 = new Timer(45000, e -> {
             d.setVisible(false);
             new Thread(() -> {
                 try {
@@ -71,15 +71,11 @@ public class GifPlayer {
             JOptionPane.showOptionDialog(null,"Before you go....","Wait",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null,new Object[]{},null);
 
         });
-        pause2.setRepeats(false);
-        Timer pause1 = new Timer(1000, e -> {
-
-        });
         pause1.setRepeats(false);
         int bruh= JOptionPane.showConfirmDialog(null,"Would you like to get sturdy?","Sturdy Time",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE);
         if(bruh==0){
             LocalDateTime then = LocalDateTime.now();
-            pause2.start();
+            pause1.start();
             gif.playSturdySong();
             do {
                 new Thread(() -> {
