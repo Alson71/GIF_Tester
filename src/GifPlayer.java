@@ -44,8 +44,11 @@ public class GifPlayer {
         ImageIcon icon1 = new ImageIcon(Objects.requireNonNull(GifPlayer.class.getResource("sturdy.gif")).getFile());
         JOptionPane pane = new JOptionPane("",JOptionPane.INFORMATION_MESSAGE,JOptionPane.DEFAULT_OPTION,icon1,new Object[]{});
         JOptionPane pane2=new JOptionPane( " ", JOptionPane.INFORMATION_MESSAGE,JOptionPane.DEFAULT_OPTION ,icon,new Object[]{});
+        Color color = new Color(23, 0, 5);
         JDialog d = pane.createDialog(null, "Sturdy");
         JDialog d2= pane2.createDialog(null,"Wake up to Reality");
+        pane2.setBackground(color);
+        pane2.setForeground(color);
         d.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         d2.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         Timer pause1 = new Timer(45000, e -> {
