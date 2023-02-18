@@ -18,7 +18,6 @@ public class GifPlayer {
 
     
     public static void main(String[] args) {
-        
         startProgram();
     }
 
