@@ -18,7 +18,7 @@ public class GifPlayer {
 
     
     public static void main(String[] args) {
-        createFiles();
+        
         startProgram();
     }
 
@@ -147,7 +147,7 @@ public class GifPlayer {
     
 
     public static void startProgram(){
-
+        createFiles();
         makePause();
 
         int ok= JOptionPane.showConfirmDialog(null,"Would you like to get sturdy?","Sturdy Time",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE);
